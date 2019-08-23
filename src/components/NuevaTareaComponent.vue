@@ -12,8 +12,8 @@
 import { bus } from './../main.js'
 
 export default {
-	props:['cursos','actualizarContador'],
-	data(){
+	props:['actualizarContador','cursos'],
+		data(){
 		return{
 			NuevoCurso:''
 		}
@@ -32,13 +32,7 @@ export default {
 			}
 			this.NuevoCurso = '';
 		}
-	},
-	mounted(){
-		bus.$emit('actualizarContador',this.cursos.length)
-	},
-	updated(){
-		bus.$emit('actualizarContador',this.cursos.length)
-		console.log('Se a actualizado el contador');
 	}
+
 }
 </script>
